@@ -3,9 +3,9 @@
   "build": {
     "dockerfile": "../Dockerfile"
   },
-  "workspaceFolder": "/workspaces/Spark-Project",
+  "workspaceFolder": "/opt/spark-notebooks",
   "remoteUser": "root",
-  "forwardPorts": [4040, 8888],
+  "forwardPorts": [4040, 4041, 7077, 8080, 8081, 8888],
   "portsAttributes": {
     "8888": {
       "label": "Jupyter",
@@ -33,6 +33,7 @@
       "settings": {
         "python.defaultInterpreterPath": "/usr/bin/python3",
         "python.analysis.extraPaths": [
+          "/opt/spark-app",
           "/opt/spark/python",
           "/opt/spark/python/lib/py4j-0.10.9.7-src.zip"
         ]
@@ -40,3 +41,4 @@
     }
   }
 }
+ 
