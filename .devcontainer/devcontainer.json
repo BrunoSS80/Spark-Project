@@ -1,15 +1,18 @@
 {
   "name": "Spark Data Engineering",
-  "build": {
-    "dockerfile": "../Dockerfile"
-  },
-  "workspaceFolder": "/opt/spark-notebooks",
+  "dockerComposeFile": "../docker-compose.yaml",
+  "service": "jupyter",
+  "workspaceFolder": "/workspaces/Spark-Project",
   "remoteUser": "root",
-  "forwardPorts": [4040, 4041, 7077, 8080, 8081, 8888],
+  "forwardPorts": [4040, 7077, 8080, 8081, 8888],
   "portsAttributes": {
     "8888": {
       "label": "Jupyter",
       "onAutoForward": "openBrowser"
+    },
+    "8080": {
+      "label": "Spark Master UI",
+      "onAutoForward": "notify"
     },
     "4040": {
       "label": "Spark Job UI",
@@ -17,11 +20,7 @@
     }
   },
   "remoteEnv": {
-    "DATA_PATH": "/workspaces/Spark-Project/data",
-    "SPARK_HOME": "/opt/spark",
-    "PYSPARK_PYTHON": "/usr/bin/python3",
-    "PYTHONPATH": "/opt/spark/python:/opt/spark/python/lib/py4j-0.10.9.7-src.zip",
-    "PATH": "/opt/spark/bin:${containerEnv:PATH}"
+    "DATA_PATH": "/opt/spark-data"
   },
   "customizations": {
     "vscode": {
@@ -32,13 +31,8 @@
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/bin/python3",
-        "python.analysis.extraPaths": [
-          "/opt/spark-app",
-          "/opt/spark/python",
-          "/opt/spark/python/lib/py4j-0.10.9.7-src.zip"
-        ]
+        "python.analysis.extraPaths": ["/opt/spark-app"]
       }
     }
   }
 }
- 
