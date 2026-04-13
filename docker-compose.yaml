@@ -1,5 +1,5 @@
 version: '3.8'
-
+ 
 services:
   spark-master:
     image: apache/spark:3.5.1
@@ -19,7 +19,7 @@ services:
       - ./data:/opt/spark-data
     networks:
       - spark-net
-
+ 
   spark-worker:
     image: apache/spark:3.5.1
     container_name: spark-worker
@@ -38,7 +38,7 @@ services:
       - ./data:/opt/spark-data
     networks:
       - spark-net
-
+ 
   jupyter:
     build: .
     image: local-pyspark-351:latest
@@ -59,7 +59,7 @@ services:
       - ./app:/opt/spark-app
     networks:
       - spark-net
-
+ 
 networks:
   spark-net:
     driver: bridge
