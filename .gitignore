@@ -23,3 +23,9 @@ Thumbs.db
 *.csv
 *.png
 *.pdf
+
+data/output/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
