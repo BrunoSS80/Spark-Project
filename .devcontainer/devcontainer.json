@@ -2,8 +2,26 @@
   "name": "Spark Data Engineering",
   "dockerComposeFile": "../docker-compose.yml",
   "service": "jupyter",
-  "workspaceFolder": "/opt/spark-app",
+  "workspaceFolder": "/workspaces/Spark-Project",
   "remoteUser": "root",
+  "forwardPorts": [4040, 7077, 8080, 8081, 8888],
+  "portsAttributes": {
+    "8888": {
+      "label": "Jupyter",
+      "onAutoForward": "openBrowser"
+    },
+    "8080": {
+      "label": "Spark Master UI",
+      "onAutoForward": "notify"
+    },
+    "4040": {
+      "label": "Spark Job UI",
+      "onAutoForward": "notify"
+    }
+  },
+  "remoteEnv": {
+    "DATA_PATH": "/opt/spark-data"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -16,6 +34,5 @@
         "python.analysis.extraPaths": ["/opt/spark-app"]
       }
     }
-  },
-  "postCreateCommand": "pip3 install -r /opt/spark-app/requirements.txt"
+  }
 }
