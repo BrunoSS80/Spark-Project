@@ -1,0 +1,21 @@
+{
+  "name": "Spark Data Engineering",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "jupyter",
+  "workspaceFolder": "/opt/spark-app",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.pylance",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "python.analysis.extraPaths": ["/opt/spark-app"]
+      }
+    }
+  },
+  "postCreateCommand": "pip3 install -r /opt/spark-app/requirements.txt"
+}

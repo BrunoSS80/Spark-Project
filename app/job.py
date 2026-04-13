@@ -18,3 +18,4 @@ print("\n\n=== Writing Output ===\n")
 df.write.mode("overwrite").csv("/opt/spark-data/output/result", header=True)
 
 time.sleep(5000)
+spark.stop()
