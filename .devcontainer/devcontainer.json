@@ -31,7 +31,7 @@
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/bin/python3",
-        "python.analysis.extraPaths": ["/opt/spark-app"]
+        "python.analysis.extraPaths": ["/opt/spark-src"]
       }
     }
   }
