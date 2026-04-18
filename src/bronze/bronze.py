@@ -32,3 +32,5 @@ def load_bronze():
 
 if __name__ == "__main__":
     load_bronze()
+
+spark.stop()
