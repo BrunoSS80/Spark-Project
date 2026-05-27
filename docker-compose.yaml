@@ -48,6 +48,7 @@ services:
     ports:
       - "8888:8888"
       - "4041:4040"
+      - "8501:8501"
     environment:
       - PYSPARK_MASTER=spark://spark-master:7077
       - PYSPARK_PYTHON=python3

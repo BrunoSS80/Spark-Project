@@ -28,9 +28,6 @@ def load_bronze():
 
     else:
         print("-----PROCESSO CONCLUIDO-----")
-        spark.stop()
 
 if __name__ == "__main__":
     load_bronze()
-
-spark.stop()

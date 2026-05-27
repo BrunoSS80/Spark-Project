@@ -8,10 +8,12 @@ spark.sparkContext.setLogLevel("ERROR")
 
 
 def load_silver():
+    print("-----Iniciando Camada Silver-----")
     clean_orders()
     clean_payments()
     clean_customers()
     clean_items()
+    print("-----Camada Silver Concluida-----")
 
 def clean_orders():
     df = spark.read.parquet("/opt/spark-data/bronze/olist_orders_dataset")
@@ -75,5 +77,3 @@ def clean_customers():
 
 if __name__ == "__main__":
     load_silver()
-
-spark.stop()
