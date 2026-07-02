@@ -170,5 +170,5 @@ Desenvolver um pipeline de dados moderno para consolidar dados de vendas de um e
 Desenvolvido por **Bruno Severgnini da Silva**
 
 📌 Conecte-se comigo:
-- LinkedIn: https://www.linkedin.com/in/bruno-severgnini-9049b8258/
+- LinkedIn: https://www.linkedin.com/in/bruno-severgnini/
 - GitHub: https://github.com/BrunoSS80
